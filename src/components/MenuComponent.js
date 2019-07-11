@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import { Card, CardImg, CardImgOverlay, CardText, CardBody, CardTitle } from 'reactstrap';
+import DishDetail from './DishdetailComponent'
 
 class Menu extends Component {
 
@@ -20,15 +21,20 @@ class Menu extends Component {
         this.setState({selectedDish: dish});
     }
     static renderDish(dish) {
+        console.log("in dish render");
         if(dish != null){
             return(
-              <card>
-                  <CardImg width="100%" src={dish.image} alt={dish.name} />
-                    <CardBody>
-                        <CardTitle>{dish.name}</CardTitle>
-                        <CardText>{dish.description}</CardText>
-                    </CardBody>
-              </card>
+                <div>
+                    <DishDetail dish={dish}/>
+                </div>
+
+              // <card>
+              //     <CardImg width="100%" src={dish.image} alt={dish.name} />
+              //       <CardBody>
+              //           <CardTitle>{dish.name}</CardTitle>
+              //           <CardText>{dish.description}</CardText>
+              //       </CardBody>
+              // </card>
             );
         }
         else {
