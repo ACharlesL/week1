@@ -58,11 +58,11 @@ class Menu extends Component {
             );
         });
         return (
-            <div className="container">
+            <div className="container ">
                 <div className="row">
                         {menu}
                 </div>
-                <div className="row">
+                <div className="row ">
                     {Menu.renderDish(this.state.selectedDish)}
                 </div>
             </div>

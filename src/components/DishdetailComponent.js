@@ -24,8 +24,10 @@ class DishDetail extends Component {
             <div className="container row">
                <div className="row col-12 col-md-5 m-1">
                    <CardImg width="100%" src={dishCurrent.image} alt={dishCurrent.name}/>
+                   <CardImgOverlay>
                    <CardTitle heading>{dishCurrent.name}</CardTitle>
-                   <p>{dishCurrent.description}</p>
+                   </CardImgOverlay>
+                       <p>{dishCurrent.description}</p>
                </div>
                <div className="row col-12 col-md-5 m-1">
                    <h3>Comments</h3>
