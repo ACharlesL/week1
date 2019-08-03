@@ -1,16 +1,9 @@
-import React, {Component} from 'react';
+import React from 'react';
 import { CardImg, CardImgOverlay, CardTitle } from 'reactstrap';
 
-class DishDetail extends Component {
-    constructor(props){
-        super(props);
-
-        this.state = {
-        };
-    }
-    render(){
+    function RenderDish({dish}) {
        // const desc =this.props.dishes.map((dish) => {
-        const dishCurrent = this.props.dish;
+        const dishCurrent = dish;
         console.log(this.props.dish)
         let dishComment = this.props.dish.comments.map((comment) => {
             return(
@@ -38,6 +31,11 @@ class DishDetail extends Component {
        // })
 
     }
-}
+
+    function RenderComments({comments}) {
+
+    }
+
+
 
 export default DishDetail;
